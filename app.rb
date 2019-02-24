@@ -12,10 +12,12 @@ get '/contacts' do
 end	
 
 get '/about' do
+	@error = 'Error 404 - Страница в разроботке!'
 	erb :about
 end	
 
 get '/something' do
+	@error = 'Error 404 - Страница в разроботке!'
 	erb :something
 end	
 
