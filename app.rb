@@ -4,7 +4,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-	erb "Hello! <a href=\"https://github.com/karamalesa1980/lesson22\">Original</a> pattern has been modified for <a href=\"https://www.youtube.com/channel/UCiqUSuswB1_uU2BONwvCTYg?view_as=subscriber\">Karamalesa TV</a>"			
+	erb "Hello! <a href=\"https://github.com/karamalesa1980\">My GitHub</a> pattern has been modified for <a href=\"https://www.youtube.com/channel/UCiqUSuswB1_uU2BONwvCTYg?view_as=subscriber\">Karamalesa TV</a>"			
 end
 
 get '/contacts' do
