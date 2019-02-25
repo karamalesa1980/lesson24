@@ -22,6 +22,7 @@ get '/something' do
 end	
 
 get '/visit' do
+
 	erb :visit
 end	
 
@@ -31,17 +32,47 @@ post '/visit' do
 	@date_time   = params[:date_time]
 	@professional = params[:professional]
 	@color = params[:colorpicker]
-	
 
+
+
+	# хеш 
+
+	hh = { :user_name => "Введите Ваше имя",
+		   :user_phone => "Введите Ваш телефон",
+		   :date_time => "Введите дату и время"
+		    
+	}
+
+	
+	# для каждой пары ключ-значение
+	hh.each do |key, value|
+
+		# если параметр пуст
+		if params[key] == ''
+
+				# переменной error присвоить value из хеша hh
+				# (а value из хеша hh это сообщение об ошибке)
+				# т.е переменной error присвоить сообщение об ошибке
+			@error = hh[key]
+
+				# вернуть представление visit
+			erb :visit
+			
+				
+
+		end
+				
+	end
+		
+	
 	@title = 'Спасибо!'
 	@message = "#{@user_name} мы будем вас ждать!  #{@date_time} "
 
 	f = File.open './public/users.txt', 'a'
 	f.write "User: #{@user_name}, Phone: #{@user_phone}, Date and time: #{@date_time}, Professional: #{@professional}, Color: #{@color}\n"
 	f.close
-
-	erb :visit
-
+	erb :visit	
+	
 end
 
 post '/contacts' do

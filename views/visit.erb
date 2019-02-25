@@ -4,19 +4,19 @@
 <form action="/visit" method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1">Ваше имя</label>
-    <input name="user_name" type="text" class="form-control" placeholder="Ваше имя">
+    <input name="user_name" type="text" class="form-control" placeholder="Ваше имя" value="<%=@user_name%>">
     <small id="emailHelp" class="form-text text-muted">We'll never share your Name with anyone else.</small>
   </div>
 
     <div class="form-group">
     <label for="exampleInputEmail1">Ваш телефон</label>
-    <input name="user_phone" type="text" class="form-control" placeholder="Ваш телефон">
+    <input name="user_phone" type="text" class="form-control" placeholder="Ваш телефон" value="<%=@user_phone%>">
     <small id="emailHelp" class="form-text text-muted">We'll never share your Number phone with anyone else.</small>
   </div>
 
     <div class="form-group">
     <label for="exampleInputEmail1">Когда Вас ждать</label>
-    <input name="date_time" type="text" class="form-control" placeholder="Дата и время">
+    <input name="date_time" type="text" class="form-control" placeholder="Дата и время" value="<%=@date_time%>">
   
   </div>
 
